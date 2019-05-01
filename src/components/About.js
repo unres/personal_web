@@ -16,11 +16,11 @@ class About extends React.Component {
             <Image src={image} circular size="small" centered />
           </Grid.Row>
           <Grid.Row>
-            <h2 style={{ color: "white" }}> About Me </h2>
+            <h2> About Me </h2>
           </Grid.Row>
         </Grid.Column>
         <Grid.Column verticalAlign="middle" textAlign="left" width={11}>
-          <font size="4" color="white">
+          <font size="4">
             My name is Timothy Bell and I am 22 years old. I am currently a
             junior at Texas Tech University working towards my bachelor’s in
             computer science and a minor in Mathematics. I was born in Seattle,

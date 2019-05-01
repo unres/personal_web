@@ -1,11 +1,10 @@
 body {
   font-family: "Alegreya Sans", sans-serif;
-  background-color: #141115;
+  background-color: #faf9ff;
 }
 
 .header {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  font-size: 200%;
 }
 
 .Image {
@@ -15,8 +14,12 @@ body {
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 35%;
+  font-size: large;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: Black;
+}
+.h1 {
+  font-size: 1.5em;
 }
