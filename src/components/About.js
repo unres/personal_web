@@ -1,0 +1,35 @@
+import React from "react";
+import { Grid, Image } from "semantic-ui-react";
+import image from "../assets/logo.PNG";
+
+class About extends React.Component {
+  render() {
+    return (
+      <Grid columns={2} relaxed="very" style={{ height: "20vh" }} stackable>
+        <Grid.Column
+          verticalAlign="middle"
+          textAlign="center"
+          width={5}
+          style={{ marginTop: "-5%" }}
+        >
+          <Grid.Row>
+            <Image src={image} circular size="small" centered />
+          </Grid.Row>
+          <Grid.Row>
+            <h2 style={{ color: "white" }}> About Me </h2>
+          </Grid.Row>
+        </Grid.Column>
+        <Grid.Column verticalAlign="middle" textAlign="left" width={11}>
+          <font size="4" color="white">
+            My name is Timothy Bell and I am 22 years old. I am currently a
+            junior at Texas Tech University working towards my bachelor’s in
+            computer science and a minor in Mathematics. I was born in Seattle,
+            Washington and currently reside in Lubbock, Texas for school.
+          </font>
+        </Grid.Column>
+      </Grid>
+    );
+  }
+}
+
+export default About;
