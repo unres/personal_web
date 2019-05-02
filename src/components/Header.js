@@ -5,10 +5,11 @@ import Resume from "../assets/Resume2018.pdf";
 
 class Header extends React.Component {
   render() {
+    const { values } = this.props;
     return (
       <div className="ui huge fixed icon menu secondary  main">
         <Menu.Item>Timothy Bell</Menu.Item>
-        <Menu.Item name="Home" href="" target="_blank">
+        <Menu.Item name="Home" onClick={this.props.handleChange(true)}>
           <Icon name="home" />
           Home
         </Menu.Item>
@@ -32,7 +33,11 @@ class Header extends React.Component {
           <Icon name="linkedin" />
           LinkedIn
         </Menu.Item>
-        <Menu.Item name="Contact Me" position="right">
+        <Menu.Item
+          name="Contact Me"
+          position="right"
+          onClick={this.props.handleChange(false)}
+        >
           <Icon name="envelope square" />
           Contact Me
         </Menu.Item>
