@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { Container } from "semantic-ui-react";
 
 import "../css/App.css";
 import Header from "../components/Header.js";
@@ -27,8 +28,12 @@ class App extends React.Component {
     }
     return (
       <div>
-        <Header handleChange={this.handleChange} />
-        <Contact />
+        <Fragment>
+          <Header handleChange={this.handleChange} />
+          <Container>
+            <Contact />
+          </Container>
+        </Fragment>
       </div>
     );
   }

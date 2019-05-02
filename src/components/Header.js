@@ -5,7 +5,6 @@ import Resume from "../assets/Resume2018.pdf";
 
 class Header extends React.Component {
   render() {
-    const { values } = this.props;
     return (
       <div className="ui huge fixed icon menu secondary  main">
         <Menu.Item>Timothy Bell</Menu.Item>
