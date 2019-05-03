@@ -1,113 +1,68 @@
 import React from "react";
-import axios from "axios";
-import { Button, Form, Grid, Header, Segment } from "semantic-ui-react";
+import {
+  Grid,
+  Header,
+  Segment,
+  Divider,
+  List,
+  Icon,
+  Image
+} from "semantic-ui-react";
 
-const API_PATH =
-  "http://localhost:1992/react-contact-form/api/contact/index.php";
+import image from "../assets/fuji.jpeg";
 
+const styles = {
+  image: {
+    height: "100vh",
+    width: "100vw"
+  },
+  form: { marginTop: "-80vh" },
+  list: { marginLeft: "10vh" }
+};
 class Contact extends React.Component {
-  state = {
-    name: "",
-    email: "",
-    message: "",
-    sent: false,
-    buttonText: "Send Message"
-  };
-
-  handleFormSubmit(event) {
-    event.preventDefault();
-    console.log(this.state);
-  }
-
-  formSubmit = e => {
-    e.preventDefault();
-
-    this.setState({
-      buttonText: "...sending"
-    });
-
-    console.log(this.state);
-
-    e.preventDefault();
-    axios({
-      method: "post",
-      url: `${API_PATH}`,
-      headers: { "content-type": "application/json" },
-      data: this.state
-    })
-      .then(result => {
-        this.setState(
-          {
-            mailSent: result.data.sent
-          },
-          this.resetForm()
-        );
-        console.log(this.state);
-      })
-      .catch(error => this.setState({ error: error.message }));
-  };
-
-  resetForm = () => {
-    this.setState({
-      name: "",
-      message: "",
-      email: "",
-      buttonText: "Message Sent"
-    });
-  };
-
   render() {
     return (
-      <Grid centered columns={2} stackable style={{ marginTop: "20vh" }}>
-        <Grid.Column>
-          <Header as="h2" textAlign="center">
-            Fill Out The Form Below:
-          </Header>
-          <Segment>
-            <Form size="large" action="../ap/action_page.php">
-              <Form.Input
-                fluid
-                icon="user"
-                iconPosition="left"
-                placeholder="Name"
-                value={this.state.name}
-                onChange={e => this.setState({ name: e.target.value })}
-              />
-              <Form.Input
-                fluid
-                icon="lock"
-                iconPosition="left"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={e => this.setState({ email: e.target.value })}
-              />
-              <Form.TextArea
-                placeholder="Message"
-                value={this.state.message}
-                onChange={e => this.setState({ message: e.target.value })}
-              />
+      <div>
+        <Image src={image} style={styles.image} fluid />
+        <Grid centered columns={4} stackable style={styles.form}>
+          <Grid.Column>
+            <Header as="h2" textAlign="center">
+              You Can Reach Me At:
+            </Header>
+            <Segment>
+              <Header as="h3" textAlign="center" style={{ marginTop: "5%" }}>
+                <Icon name="mail" /> Timothy.bell@ttu.edu
+              </Header>
 
-              <Button
-                color="blue"
-                fluid
-                size="large"
-                onClick={e => this.formSubmit(e)}
-                value="Submit"
-              >
-                Send Email
-              </Button>
-              <div>
-                {this.state.mailSent && (
-                  <div className="success">Thank you for contcting me.</div>
-                )}
-                {this.state.error && (
-                  <div className="error">Sorry we had some problems.</div>
-                )}
-              </div>
-            </Form>
-          </Segment>
-        </Grid.Column>
-      </Grid>
+              <Divider section />
+
+              <List size={"huge"} style={styles.list}>
+                <List.Item
+                  href="https://www.facebook.com/tj.bell.7"
+                  target="_blank"
+                >
+                  <List.Icon name="facebook" />
+                  <List.Content>Facebook</List.Content>
+                </List.Item>
+                <List.Item
+                  href="https://www.instagram.com/unreserved_/"
+                  target="_blank"
+                >
+                  <List.Icon name="instagram" />
+                  <List.Content>Instagram</List.Content>
+                </List.Item>
+                <List.Item
+                  href="https://twitter.com/unreserved97"
+                  target="_blank"
+                >
+                  <List.Icon name="twitter" />
+                  <List.Content>Twitter</List.Content>
+                </List.Item>
+              </List>
+            </Segment>
+          </Grid.Column>
+        </Grid>
+      </div>
     );
   }
 }

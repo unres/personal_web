@@ -1,8 +1,7 @@
-import React, { Fragment } from "react";
-import { Container } from "semantic-ui-react";
+import React from "react";
 
 import "../css/App.css";
-import Header from "../components/Header.js";
+import NavBar from "../components/navBar.js";
 import Img from "../components/Img.js";
 import About from "../components/About.js";
 import Footer from "../components/Footer.js";
@@ -19,7 +18,7 @@ class App extends React.Component {
     if (this.state.home) {
       return (
         <div className="App">
-          <Header handleChange={this.handleChange} />
+          <NavBar handleChange={this.handleChange} />
           <Img />
           <About />
           <Footer />
@@ -28,12 +27,8 @@ class App extends React.Component {
     }
     return (
       <div>
-        <Fragment>
-          <Header handleChange={this.handleChange} />
-          <Container>
-            <Contact />
-          </Container>
-        </Fragment>
+        <NavBar handleChange={this.handleChange} />
+        <Contact />
       </div>
     );
   }

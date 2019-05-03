@@ -3,10 +3,10 @@ import { Menu, Icon } from "semantic-ui-react";
 import "../css/App.css";
 import Resume from "../assets/Resume2018.pdf";
 
-class Header extends React.Component {
+class navBar extends React.Component {
   render() {
     return (
-      <div className="ui huge fixed icon menu secondary  main">
+      <div className="ui huge fixed stackable icon menu secondary  main">
         <Menu.Item>Timothy Bell</Menu.Item>
         <Menu.Item name="Home" onClick={this.props.handleChange(true)}>
           <Icon name="home" />
@@ -45,4 +45,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default navBar;
