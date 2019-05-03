@@ -2,6 +2,9 @@ import React from "react";
 import axios from "axios";
 import { Button, Form, Grid, Header, Segment } from "semantic-ui-react";
 
+const API_PATH =
+  "http://localhost:1992/react-contact-form/api/contact/index.php";
+
 class Contact extends React.Component {
   state = {
     name: "",
@@ -23,20 +26,25 @@ class Contact extends React.Component {
       buttonText: "...sending"
     });
 
-    let data = {
-      name: this.state.name,
-      email: this.state.email,
-      message: this.state.message
-    };
     console.log(this.state);
-    axios
-      .post("API_URI", data)
-      .then(res => {
-        this.setState({ sent: true }, this.resetForm());
+
+    e.preventDefault();
+    axios({
+      method: "post",
+      url: `${API_PATH}`,
+      headers: { "content-type": "application/json" },
+      data: this.state
+    })
+      .then(result => {
+        this.setState(
+          {
+            mailSent: result.data.sent
+          },
+          this.resetForm()
+        );
+        console.log(this.state);
       })
-      .catch(() => {
-        console.log("Message not sent");
-      });
+      .catch(error => this.setState({ error: error.message }));
   };
 
   resetForm = () => {
@@ -53,10 +61,10 @@ class Contact extends React.Component {
       <Grid centered columns={2} stackable style={{ marginTop: "20vh" }}>
         <Grid.Column>
           <Header as="h2" textAlign="center">
-            Fill Out the Form Below:
+            Fill Out The Form Below:
           </Header>
           <Segment>
-            <Form size="large">
+            <Form size="large" action="../ap/action_page.php">
               <Form.Input
                 fluid
                 icon="user"
@@ -88,6 +96,14 @@ class Contact extends React.Component {
               >
                 Send Email
               </Button>
+              <div>
+                {this.state.mailSent && (
+                  <div className="success">Thank you for contcting me.</div>
+                )}
+                {this.state.error && (
+                  <div className="error">Sorry we had some problems.</div>
+                )}
+              </div>
             </Form>
           </Segment>
         </Grid.Column>
