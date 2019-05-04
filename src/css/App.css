@@ -12,6 +12,16 @@ body {
   transform: translate(-50%, -50%);
   color: Black;
 }
+.hero-text-mobile {
+  text-align: center;
+  position: absolute;
+  font-size: large;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: Black;
+}
+
 .h1 {
   font-size: 1.5em;
 }

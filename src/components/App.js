@@ -8,33 +8,15 @@ import Footer from "../components/Footer.js";
 import Contact from "../components/Contact.js";
 
 class App extends React.Component {
-  state = { home: true };
-
-  handleChange = input => event => {
-    this.setState({ home: input });
-  };
-
-  renderContent() {
-    if (this.state.home) {
-      return (
-        <div className="App">
-          <NavBar handleChange={this.handleChange} />
-          <Img />
-          <About />
-          <Footer />
-        </div>
-      );
-    }
+  render() {
     return (
-      <div>
-        <NavBar handleChange={this.handleChange} />
-        <Contact />
+      <div className="App">
+        <NavBar />
+        <Img />
+        <About />
+        <Footer />
       </div>
     );
-  }
-
-  render() {
-    return <div className="App">{this.renderContent()}</div>;
   }
 }
 
