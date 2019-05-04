@@ -1,10 +1,8 @@
 import React from "react";
 import { Menu, Icon, Responsive, Sidebar } from "semantic-ui-react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "../css/App.css";
 import Resume from "../assets/Resume2018.pdf";
-import Contact from "../components/Contact.js";
-import App from "../components/App.js";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const NavBarMobile = ({ onPusherClick, onToggle, visible }) => (
   <Sidebar.Pushable>
@@ -17,10 +15,12 @@ const NavBarMobile = ({ onPusherClick, onToggle, visible }) => (
       vertical
       visible={visible}
     >
-      <Menu.Item name="Home">
-        <Icon name="home" />
-        Home
-      </Menu.Item>
+      <Link to="/">
+        <Menu.Item name="Home">
+          <Icon name="home" />
+          Home
+        </Menu.Item>
+      </Link>
 
       <Menu.Item name="Resume" href={Resume} target="_blank">
         <Icon name="file" />
@@ -39,10 +39,12 @@ const NavBarMobile = ({ onPusherClick, onToggle, visible }) => (
         LinkedIn
       </Menu.Item>
 
-      <Menu.Item name="Contact Me" position="right">
-        <Icon name="envelope square" />
-        Contact Me
-      </Menu.Item>
+      <Link to="/Contact">
+        <Menu.Item name="Contact Me" position="right">
+          <Icon name="envelope square" />
+          Contact Me
+        </Menu.Item>
+      </Link>
     </Sidebar>
     <Sidebar.Pusher dimmed={visible} onClick={onPusherClick}>
       <Menu>
@@ -58,10 +60,12 @@ const NavBarDesktop = props => (
   <div className="ui huge fixed stackable icon menu secondary  main">
     <Menu.Item>Timothy Bell</Menu.Item>
 
-    <Menu.Item name="Home">
-      <Icon name="home" />
-      Home
-    </Menu.Item>
+    <Link to="/">
+      <Menu.Item name="Home">
+        <Icon name="home" />
+        Home
+      </Menu.Item>
+    </Link>
 
     <Menu.Item name="Resume" href={Resume} target="_blank">
       <Icon name="file" />
@@ -80,10 +84,12 @@ const NavBarDesktop = props => (
       LinkedIn
     </Menu.Item>
 
-    <Menu.Item name="Contact Me" position="right">
-      <Icon name="envelope square" />
-      Contact Me
-    </Menu.Item>
+    <Link to="/Contact">
+      <Menu.Item name="Contact Me" position="right">
+        <Icon name="envelope square" />
+        Contact Me
+      </Menu.Item>
+    </Link>
   </div>
 );
 

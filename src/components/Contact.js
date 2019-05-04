@@ -10,10 +10,12 @@ import {
   Responsive
 } from "semantic-ui-react";
 
+import NavBar from "../components/navBar.js";
 import image from "../assets/fuji.jpeg";
 
 const NavBarMobile = () => (
   <div>
+    <NavBar />
     <Image src={image} style={styles.imageMobile} fluid />
     <Grid centered columns={4} stackable style={styles.formMobile}>
       <Grid.Column>
@@ -55,6 +57,7 @@ const NavBarMobile = () => (
 
 const NavBarDesktop = () => (
   <div>
+    <NavBar />
     <Image src={image} style={styles.image} fluid />
     <Grid centered columns={4} stackable style={styles.form}>
       <Grid.Column>
