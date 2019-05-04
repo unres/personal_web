@@ -5,7 +5,6 @@ import NavBar from "../components/navBar.js";
 import Img from "../components/Img.js";
 import About from "../components/About.js";
 import Footer from "../components/Footer.js";
-import Contact from "../components/Contact.js";
 
 class App extends React.Component {
   render() {

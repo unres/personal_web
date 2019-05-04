@@ -2,7 +2,7 @@ import React from "react";
 import { Menu, Icon, Responsive, Sidebar } from "semantic-ui-react";
 import "../css/App.css";
 import Resume from "../assets/Resume2018.pdf";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavBarMobile = ({ onPusherClick, onToggle, visible }) => (
   <Sidebar.Pushable>
