@@ -5,7 +5,7 @@ import Contact from "./components/Contact";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 ReactDom.render(
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <div>
       <Route exact path="/" component={App} />
       <Route path="/Contact" component={Contact} />
