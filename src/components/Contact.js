@@ -16,13 +16,14 @@ import image from "../assets/fuji.jpeg";
 const NavBarMobile = () => (
   <div>
     <NavBar />
-    <Image src={image} style={styles.imageMobile} fluid />
     <Grid centered columns={4} stackable style={styles.formMobile}>
       <Grid.Column>
-        <Header as="h2" textAlign="center">
+        <Header as="h2" textAlign="center" style={{ color: "white" }}>
           You Can Reach Me At:
         </Header>
         <Segment>
+          <Image src={image} style={styles.imageMobile} fluid />
+          <Divider section />
           <Header as="h3" textAlign="center" style={{ marginTop: "5%" }}>
             <Icon name="mail" /> Timothy.bell@ttu.edu
           </Header>
@@ -102,9 +103,9 @@ const styles = {
     height: "100vh",
     width: "100vw"
   },
-  imageMobile: { height: "60vh", width: "100vw", marginTop: "40vh" },
+  imageMobile: { height: "50vh", width: "100vw" },
   form: { marginTop: "-80vh" },
-  formMobile: { marginTop: "-100vh" },
+  formMobile: { marginTop: "0vh", backgroundColor: "Black" },
   list: { marginLeft: "5%" }
 };
 class Contact extends React.Component {

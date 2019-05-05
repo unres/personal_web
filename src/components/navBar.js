@@ -48,7 +48,8 @@ const NavBarMobile = ({ onPusherClick, onToggle, visible }) => (
     </Sidebar>
     <Sidebar.Pusher dimmed={visible} onClick={onPusherClick}>
       <Menu>
-        <Menu.Item onClick={onToggle}>
+        <Menu.Item style={{ fontSize: "16px" }}>Timothy Bell</Menu.Item>
+        <Menu.Item onClick={onToggle} position="right">
           <Icon name="bars" />
         </Menu.Item>
       </Menu>
