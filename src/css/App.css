@@ -10,7 +10,7 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: Black;
+  color: white;
 }
 .hero-text-mobile {
   text-align: center;
@@ -19,7 +19,7 @@ body {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: Black;
+  color: white;
 }
 
 .h1 {

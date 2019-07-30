@@ -15,7 +15,7 @@ const NavBarMobile = ({ onPusherClick, onToggle, visible }) => (
       vertical
       visible={visible}
     >
-      <Link to={process.env.PUBLIC_URL + "/"}>
+      <Link to={"/"}>
         <Menu.Item name="Home">
           <Icon name="home" />
           Home
@@ -39,7 +39,7 @@ const NavBarMobile = ({ onPusherClick, onToggle, visible }) => (
         LinkedIn
       </Menu.Item>
 
-      <Link to={process.env.PUBLIC_URL + "/Contact"}>
+      <Link to={"/Contact"}>
         <Menu.Item name="Contact Me" position="right">
           <Icon name="envelope square" />
           Contact Me
@@ -58,16 +58,7 @@ const NavBarMobile = ({ onPusherClick, onToggle, visible }) => (
 );
 
 const NavBarDesktop = props => (
-  <div className="ui huge fixed stackable icon menu secondary  main">
-    <Menu.Item>Timothy Bell</Menu.Item>
-
-    <Link to={"/"}>
-      <Menu.Item name="Home">
-        <Icon name="home" />
-        Home
-      </Menu.Item>
-    </Link>
-
+  <div className="ui fixed inverted stackable icon menu secondary vertical">
     <Menu.Item name="Resume" href={Resume} target="_blank">
       <Icon name="file" />
       Resume
