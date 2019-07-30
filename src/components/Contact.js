@@ -67,7 +67,7 @@ const NavBarDesktop = () => (
         </Header>
         <Segment>
           <Header as="h3" textAlign="center" style={{ marginTop: "5%" }}>
-            <Icon name="mail" /> Timothy.bell@ttu.edu
+            <a href="mailto:timothy.bell@ttu.edu" >Timothy.bell@ttu.edu</a>
           </Header>
 
           <Divider section />

@@ -1,18 +1,20 @@
-import React from "react";
-import ReactDom from "react-dom";
-import App from "./components/App";
-import Contact from "./components/Contact";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+/// ///////////////////////////////////////////////////////////
+// Timothy Bell
+/// ///////////////////////////////////////////////////////////
 
-ReactDom.render(
-  <Router>
-    <div>
-      <Switch>
-        <Route exact path={process.env.PUBLIC_URL + "/"} component={App} />
-        <Route path={process.env.PUBLIC_URL + "/Contact"} component={Contact} />
-        <Route component={() => <div>404 Not found 1</div>} />
-      </Switch>
-    </div>
-  </Router>,
-  document.querySelector("#root")
-);
+/// ///////////////////////////////////////////////////////////
+// R E Q U I R E S  /  I M P O R T S
+/// ///////////////////////////////////////////////////////////
+
+// Import Required Libraries
+import React from 'react';
+import ReactDom from 'react-dom';
+
+// Import Custom Files
+import App from './App';
+
+/// ///////////////////////////////////////////////////////////
+// A P P  D E F I N I T I O N
+/// ///////////////////////////////////////////////////////////
+
+ReactDom.render(<App />, document.getElementById('root'));
