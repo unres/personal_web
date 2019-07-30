@@ -61,7 +61,7 @@ const NavBarDesktop = props => (
   <div className="ui huge fixed stackable icon menu secondary  main">
     <Menu.Item>Timothy Bell</Menu.Item>
 
-    <Link to={process.env.PUBLIC_URL + "/"}>
+    <Link to={"/"}>
       <Menu.Item name="Home">
         <Icon name="home" />
         Home
@@ -85,7 +85,7 @@ const NavBarDesktop = props => (
       LinkedIn
     </Menu.Item>
 
-    <Link to={process.env.PUBLIC_URL + "/Contact"}>
+    <Link to={"/Contact"}>
       <Menu.Item name="Contact Me" position="right">
         <Icon name="envelope square" />
         Contact Me
