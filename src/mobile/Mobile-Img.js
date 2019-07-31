@@ -4,7 +4,7 @@
 
 // Import Required Libraries
 import React from "react";
-import { Image, Responsive } from "semantic-ui-react";
+import { Image } from "semantic-ui-react";
 
 
 // Import Custom Files

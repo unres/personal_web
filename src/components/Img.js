@@ -4,7 +4,7 @@
 
 // Import Required Libraries
 import React from "react";
-import { Image, Responsive } from "semantic-ui-react";
+import { Image } from "semantic-ui-react";
 
 
 // Import Custom Files
@@ -19,9 +19,6 @@ const styles = {
     height: "100vh",
     width: "100vw",
   },
-  phoneImage: {
-    height: "50vh"
-  },
   overlay: {
     position: 'absolute',
     bottom: 0,
@@ -35,37 +32,16 @@ const styles = {
 // C L A S S   D E F I N I T I O N
 /// ///////////////////////////////////////////////////////////
 
-const NavBarMobile = () => (
-  <div>
-    <Image src={image} style={styles.phoneImage} fluid />
-    <div style={{position: 'absolute', bottom: 0, width: '100%', height: '50vh',backgroundColor: 'rgba(0,0,0,0.7)'}} />
-    <div className="hero-text-mobile">
-      <font size="10">Developer.</font>
-    </div>
-  </div>
-);
-
-const NavBarDesktop = props => (
-  <div>
-    <img src={image} style={styles.image} />
-    <div style={styles.overlay} />
-    <div className="hero-text">
-      <font size="10">Developer.</font>
-    </div>
-  </div>
-);
-
 class Img extends React.Component {
   render() {
     return (
       <div>
-        <Responsive {...Responsive.onlyMobile}>
-          <NavBarMobile />
-        </Responsive>
-        <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-          <NavBarDesktop />
-        </Responsive>
+      <Image src={image} style={styles.image} />
+      <div style={styles.overlay} />
+      <div className="hero-text">
+        <font size="10">Developer.</font>
       </div>
+    </div>
     );
   }
 }
