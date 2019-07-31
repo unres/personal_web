@@ -11,7 +11,6 @@ import "./css/App.css";
 import path from "./path.js"
 import NavBar from "./components/navBar.js";
 import Home from "./components/home-page/home-page.js"
-import Contact from "./components/Contact.js"
 import Footer from "./components/Footer.js";
 
 class App extends React.Component {
@@ -22,7 +21,6 @@ class App extends React.Component {
           <div className="App">
             <NavBar />
             <Route exact path={path.HOMEPAGE_PATH} component={Home} />
-            <Route exact path={path.CONTACT_PATH} component={Contact} />
             <Footer />
           </div>
         </BrowserRouter>

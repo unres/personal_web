@@ -4,7 +4,7 @@
 
 // Import Required Libraries
 import React from "react";
-import { Menu, Icon } from "semantic-ui-react";
+import { Menu, Icon, Divider } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 // Import Custom Files
@@ -19,30 +19,58 @@ class navBar extends React.Component {
   render() {
     return (
       <div className="ui fixed inverted stackable icon menu secondary vertical">
-      <Menu.Item name="Resume" href={Resume} target="_blank">
-        <Icon name="file" />
-        Resume
+        <Link>
+          <Menu.Item name="Resume" href={Resume} target="_blank">
+            <Icon name="angle double up" size="large"/>
+            Top
+          </Menu.Item>
+        </Link>
+        <Link>
+          <Menu.Item name="Resume" href={Resume} target="_blank">
+            <Icon name="address card outline" size="large" />
+            About Me
+          </Menu.Item>
+        </Link>
+        <Link>
+          <Menu.Item name="Resume" href={Resume} target="_blank">
+            <Icon name="chart line" size="large" />
+            Skills
+          </Menu.Item>
+        </Link>
+        <Link>
+          <Menu.Item name="Resume" href={Resume} target="_blank">
+            <Icon name="archive" size="large" />
+            Projects
+          </Menu.Item>
+        </Link>
+
+        <Divider />
+        
+        <Menu.Item name="Resume" href={Resume} target="_blank">
+          <Icon name="file" size="large" />
+          Resume
       </Menu.Item>
-      <Menu.Item name="Github" href="https://github.com/unres" target="_blank">
-        <Icon name="github square" />
-        Github
+        <Menu.Item name="Github" href="https://github.com/unres" target="_blank">
+          <Icon name="github square" size="large" />
+          Github
       </Menu.Item>
-      <Menu.Item
-        name="LinkedIn"
-        href="https://www.linkedin.com/in/timothy-bell97/"
-        target="_blank"
-      >
-        <Icon name="linkedin" />
-        LinkedIn
+        <Menu.Item
+          name="LinkedIn"
+          href="https://www.linkedin.com/in/timothy-bell97/"
+          target="_blank"
+        >
+          <Icon name="linkedin" size="large" />
+          LinkedIn
       </Menu.Item>
-  
-      <Link to={"/Contact"}>
-        <Menu.Item name="Contact Me" position="right">
-          <Icon name="envelope square" />
-          Contact Me
+
+        <Menu.Item
+          name="Email Me"
+          href="mailto:timothy.bell@ttu.edu"
+        >
+          <Icon name="envelope square" size="large" />
+          Email Me
         </Menu.Item>
-      </Link>
-    </div>
+      </div>
     );
   }
 }

@@ -4,7 +4,7 @@
 
 // Import Required Libraries
 import React from "react";
-import { Image } from "semantic-ui-react";
+import { Image, Icon } from "semantic-ui-react";
 
 
 // Import Custom Files
@@ -40,6 +40,9 @@ class Img extends React.Component {
       <div style={styles.overlay} />
       <div className="hero-text">
         <font size="10">Developer.</font>
+      </div>
+      <div className="hero-arrow" >
+        <Icon name="hand point down" inverted size="big"/>
       </div>
     </div>
     );

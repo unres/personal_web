@@ -4,10 +4,8 @@
 
 // Paths Information
 const HOMEPAGE_PATH = '/'
-const CONTACT_PATH = "/Contact"
 
 // Exports the paths
 module.exports = {
-    HOMEPAGE_PATH,
-    CONTACT_PATH
+    HOMEPAGE_PATH
 }
