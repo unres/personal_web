@@ -7,7 +7,7 @@ import React from "react";
 import { Grid, List } from "semantic-ui-react";
 
 // Import Custom Files
-import "../css/App.css";
+import "../css/Footer.css";
 
 /// ///////////////////////////////////////////////////////////
 // C L A S S   D E F I N I T I O N
