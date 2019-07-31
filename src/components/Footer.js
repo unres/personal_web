@@ -7,7 +7,7 @@ import React from "react";
 import { Grid, List } from "semantic-ui-react";
 
 // Import Custom Files
-import "../css/Footer.css";
+import "../css/App.css";
 
 /// ///////////////////////////////////////////////////////////
 // C L A S S   D E F I N I T I O N
@@ -18,7 +18,7 @@ class Footer extends React.Component {
     return (
     <Grid >
       <Grid.Row color={'black'}>
-      <Grid.Column width={10} style={{marginLeft: "45vw"}}>
+      <Grid.Column width={10} style={{marginLeft: "48vw"}}>
               <List horizontal inverted size={'massive'} >
                 <List.Item href="https://www.facebook.com/tj.bell.7" target="_blank" >
                   <List.Icon name="facebook" inverted />
