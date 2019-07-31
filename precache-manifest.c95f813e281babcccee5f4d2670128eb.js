@@ -8,10 +8,6 @@ self.__precacheManifest = [
     "url": "/personal_web/static/media/logo.2b780637.PNG"
   },
   {
-    "revision": "83db85b8785044dfc0c281a616315343",
-    "url": "/personal_web/static/media/fuji.83db85b8.jpeg"
-  },
-  {
     "revision": "19dec17110030b63ef4b70dc0a1da418",
     "url": "/personal_web/static/media/Resume2018.19dec171.pdf"
   },
@@ -20,19 +16,19 @@ self.__precacheManifest = [
     "url": "/personal_web/static/js/runtime~main.1b442dff.js"
   },
   {
-    "revision": "9df425d37d825ebc31f8",
-    "url": "/personal_web/static/js/main.1dfb13eb.chunk.js"
+    "revision": "fdeadbd8ae6d9a9e3912",
+    "url": "/personal_web/static/js/main.912d50a1.chunk.js"
   },
   {
-    "revision": "f34db06dff37c179de3d",
-    "url": "/personal_web/static/js/2.3b46766b.chunk.js"
+    "revision": "5e03af877b8230ce524f",
+    "url": "/personal_web/static/js/2.68bcd78c.chunk.js"
   },
   {
-    "revision": "9df425d37d825ebc31f8",
-    "url": "/personal_web/static/css/main.688fa703.chunk.css"
+    "revision": "fdeadbd8ae6d9a9e3912",
+    "url": "/personal_web/static/css/main.1c220f28.chunk.css"
   },
   {
-    "revision": "908790c56b41f40c2881808d5994c516",
+    "revision": "bcfbf732e6084b9d0212b15d3755a886",
     "url": "/personal_web/index.html"
   }
 ];
