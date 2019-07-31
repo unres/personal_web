@@ -1,0 +1,7 @@
+.ui.inverted.list .list>a.item>.icon, .ui.inverted.list>a.item>.icon {
+    color: white
+}
+
+.ui.inverted.list .list>a.item>.icon, .ui.inverted.list>a.item>.icon:hover {
+    color: red
+}

@@ -4,9 +4,10 @@
 
 // Import Required Libraries
 import React from "react";
+import { Grid, List } from "semantic-ui-react";
 
 // Import Custom Files
-import "../css/App.css";
+import "../css/Footer.css";
 
 /// ///////////////////////////////////////////////////////////
 // C L A S S   D E F I N I T I O N
@@ -14,7 +15,27 @@ import "../css/App.css";
 
 class Footer extends React.Component {
   render() {
-    return <div />;
+    return (
+    <Grid >
+      <Grid.Row color={'black'}>
+      <Grid.Column width={10} style={{marginLeft: "45vw"}}>
+              <List horizontal inverted size={'massive'} >
+                <List.Item href="https://www.facebook.com/tj.bell.7" target="_blank" >
+                  <List.Icon name="facebook" inverted />
+                </List.Item>
+
+                <List.Item href="https://www.instagram.com/unreserved_/" target="_blank" >
+                  <List.Icon name="instagram" />
+                </List.Item>
+
+                <List.Item href="https://twitter.com/unreserved97" target="_blank">
+                  <List.Icon name="twitter" />
+                </List.Item>
+              </List>
+      </Grid.Column >
+      </Grid.Row>
+    </Grid>
+    );
   }
 }
 
