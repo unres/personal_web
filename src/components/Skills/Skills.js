@@ -8,9 +8,10 @@
 // Import Required Libraries
 import React from "react";
 import { Grid } from 'semantic-ui-react'
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 
 // Import Custom Files
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import Data from '../../data/skills-data.js'
 
 //animation imports
 import { easeQuadInOut } from "d3-ease";
@@ -32,10 +33,11 @@ class Skills extends React.Component {
             <Grid style={{ marginLeft: "88px" }}>
                 <h2>Skills</h2>
                 <Grid.Row columns={4} >
-                    <Grid.Column verticalAlign="middle" textAlign="center" width={3} stretched >
+                    {Data.map((data) => 
+                        <Grid.Column verticalAlign="middle" textAlign="center" width={3} stretched >
                         <AnimatedProgressProvider
                             valueStart={0}
-                            valueEnd={66}
+                            valueEnd={data.valueEnd}
                             duration={1.4}
                             easingFunction={easeQuadInOut}
                         >
@@ -43,7 +45,7 @@ class Skills extends React.Component {
                                 return (
                                     <CircularProgressbar
                                         value={value}
-                                        text={`React`}
+                                        text={data.text}
                                         circleRatio={0.75}
                                         styles={buildStyles({
                                             rotation: 1 / 2 + 1 / 8,
@@ -57,107 +59,7 @@ class Skills extends React.Component {
                             }}
                         </AnimatedProgressProvider>
                     </Grid.Column>
-                    <Grid.Column verticalAlign="middle" textAlign="center" width={3} stretched >
-                        <AnimatedProgressProvider
-                            valueStart={0}
-                            valueEnd={66}
-                            duration={1.4}
-                            easingFunction={easeQuadInOut}
-                        >
-                            {value => {
-                                return (
-                                    <CircularProgressbar
-                                        value={value}
-                                        text={`React`}
-                                        circleRatio={0.75}
-                                        styles={buildStyles({
-                                            rotation: 1 / 2 + 1 / 8,
-                                            strokeLinecap: "butt",
-                                            trailColor: "#eee",
-                                            pathColor: "red",
-                                            textColor: "red"
-                                        })}
-                                    />
-                                );
-                            }}
-                        </AnimatedProgressProvider>
-                    </Grid.Column>
-                    <Grid.Column verticalAlign="middle" textAlign="center" width={3} stretched >
-                        <AnimatedProgressProvider
-                            valueStart={0}
-                            valueEnd={66}
-                            duration={1.4}
-                            easingFunction={easeQuadInOut}
-                        >
-                            {value => {
-                                return (
-                                    <CircularProgressbar
-                                        value={value}
-                                        text={`React`}
-                                        circleRatio={0.75}
-                                        styles={buildStyles({
-                                            rotation: 1 / 2 + 1 / 8,
-                                            strokeLinecap: "butt",
-                                            trailColor: "#eee",
-                                            pathColor: "red",
-                                            textColor: "red"
-                                        })}
-                                    />
-                                );
-                            }}
-                        </AnimatedProgressProvider>
-                    </Grid.Column>
-                    <Grid.Column verticalAlign="middle" textAlign="center" width={3} stretched >
-                        <AnimatedProgressProvider
-                            valueStart={0}
-                            valueEnd={66}
-                            duration={1.4}
-                            easingFunction={easeQuadInOut}
-                        >
-                            {value => {
-                                return (
-                                    <CircularProgressbar
-                                        value={value}
-                                        text={`React`}
-                                        circleRatio={0.75}
-                                        styles={buildStyles({
-                                            rotation: 1 / 2 + 1 / 8,
-                                            strokeLinecap: "butt",
-                                            trailColor: "#eee",
-                                            pathColor: "red",
-                                            textColor: "red"
-                                        })}
-                                    />
-                                );
-                            }}
-                        </AnimatedProgressProvider>
-                    </Grid.Column>
-                    <Grid.Column verticalAlign="middle" textAlign="center" width={3} stretched >
-                        <AnimatedProgressProvider
-                            valueStart={0}
-                            valueEnd={66}
-                            duration={1.4}
-                            easingFunction={easeQuadInOut}
-                        >
-                            {value => {
-                                return (
-                                    <CircularProgressbar
-                                        value={value}
-                                        text={`React`}
-                                        circleRatio={0.75}
-                                        styles={buildStyles({
-                                            rotation: 1 / 2 + 1 / 8,
-                                            strokeLinecap: "butt",
-                                            trailColor: "#eee",
-                                            pathColor: "red",
-                                            textColor: "red"
-                                        })}
-                                    />
-                                );
-                            }}
-                        </AnimatedProgressProvider>
-                    </Grid.Column>
-
+                    )}
                 </Grid.Row>
             </Grid>
         );
@@ -166,9 +68,11 @@ class Skills extends React.Component {
 
 export default Skills;
 
-/*                         <Carousel
-                            elements={elements}
-                            animation='slide right'
-                            showNextPrev={true}
-                            style={{width: "100%"}}
-                        /> */
+/*                         
+<Carousel
+elements={elements}
+animation='slide right'
+showNextPrev={true}
+style={{width: "100%"}}
+/>
+*/

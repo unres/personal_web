@@ -4,7 +4,7 @@
 
 // Import Required Libraries
 import React from "react";
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 // Import Custom Files
 import "./css/App.css";

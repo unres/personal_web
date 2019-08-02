@@ -11,6 +11,7 @@ import "../../css/App.css";
 import Img from "../../components/Img.js";
 import About from "../../components/About.js";
 import Skills from '../Skills/Skills.js'
+import Projects from '../Projects/Projects.js'
 
 // Import Mobile Custom Files
 import MobileImg from "../../mobile/Mobile-Img.js"
@@ -32,6 +33,7 @@ const HomeDesktop = props => (
     <Img />
     <About />
     <Skills />
+    <Projects />
   </div>
 );
 

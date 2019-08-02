@@ -4,14 +4,24 @@
 
 module.exports = [
     {
-        title: ' Sprouts and Bacon ',
-        discription: 'Perfect mixture of greens with meat to make for the ultimate side dish.',
-        ingrediants: ['1lb Brussel Sprouts', '1lb Bacon', 'Salt and Pepper', 'Olive Oil', 'Balsamic Vinegar'],
-        steps: [
-            'Chop the Brussel Sprouts into 1/2 or 1/4. Chop the Bacon into 1 inch pieces'
-        ],
-        image: 'default',
-        labels: [ 'side' ]
+        text: 'React',
+        valueEnd: 70,
+    },
+    {
+        text: 'Ruby',
+        valueEnd: 40,
+    },
+    {
+        text: 'Java',
+        valueEnd: 30,
+    },
+    {
+        text: 'Python',
+        valueEnd: 50,
+    },
+    {
+        text: 'Jest',
+        valueEnd: 40,
     },
     
 ]
