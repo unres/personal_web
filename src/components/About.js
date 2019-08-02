@@ -16,7 +16,7 @@ import image from "../assets/logo.PNG";
 class About extends React.Component {
   render() {
     return (
-      <Grid columns={2} relaxed="very" stackable>
+      <Grid columns={2} relaxed="very" stackable   style={{marginLeft: "88px", padding: '40px 40px 40px 40px'}}>
         <Grid.Column verticalAlign="middle" textAlign="center" width={5} >
           <Grid.Row>
             <Image src={image} circular size="small" centered />

@@ -8,7 +8,6 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 // Import Custom Files
 import "./css/App.css";
-import path from "./path.js"
 import NavBar from "./components/navBar.js";
 import Home from "./components/home-page/home-page.js"
 import Footer from "./components/Footer.js";
@@ -20,7 +19,7 @@ class App extends React.Component {
         <BrowserRouter>
           <div className="App">
             <NavBar />
-            <Route exact path={path.HOMEPAGE_PATH} component={Home} />
+            <Home />
             <Footer />
           </div>
         </BrowserRouter>

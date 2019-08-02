@@ -10,6 +10,7 @@ import { Responsive } from 'semantic-ui-react'
 import "../../css/App.css";
 import Img from "../../components/Img.js";
 import About from "../../components/About.js";
+import Skills from '../Skills/Skills.js'
 
 // Import Mobile Custom Files
 import MobileImg from "../../mobile/Mobile-Img.js"
@@ -30,6 +31,7 @@ const HomeDesktop = props => (
   <div className="App">
     <Img />
     <About />
+    <Skills />
   </div>
 );
 
