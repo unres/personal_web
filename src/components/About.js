@@ -26,12 +26,14 @@ class About extends React.Component {
           <Grid.Row>
             <h2> About Me </h2>
           </Grid.Row>
+          <Grid.Row>
           <font size="4" >
             My name is Timothy Bell and I am 22 years old. I am currently a
             junior at Texas Tech University working towards my bachelor’s in
             computer science and a minor in Mathematics. I was born in Seattle,
             Washington and currently reside in Lubbock, Texas for school.
           </font>
+          </Grid.Row>
         </Grid.Column>
       </Grid>
     );

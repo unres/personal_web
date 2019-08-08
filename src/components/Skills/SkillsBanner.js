@@ -15,18 +15,17 @@ import { Grid } from "semantic-ui-react";
 /// ///////////////////////////////////////////////////////////
 
 const styles = {
-  textQuote: {
-    marginLeft: '50vh',
-    color: 'White'
-  },
-  textAuthor: {
+  text: {
+    fontSize: '70px',
+    marginTop: '30px',
+    marginLeft: '47%',
     color: 'White'
   },
   section: {
     marginTop: '6px',
     width: '100%',
-    height: '20vh',
-    backgroundColor: 'grey',
+    height: '30vh',
+    backgroundColor: 'black',
     padding: "40px 40px 40px 40px"
   }
 };
@@ -35,18 +34,14 @@ const styles = {
 // C L A S S   D E F I N I T I O N
 /// ///////////////////////////////////////////////////////////
 
-class Quote extends React.Component {
+class SkillsBanner extends React.Component {
   render() {
     return (
-        <Grid>
             <Grid.Row style={styles.section}>
-                <h2 style={styles.textQuote}>"This is an Awesome Quote that is deep and legendary"</h2>
-                
-                <h3 style={styles.textAuthor}> - A Legend</h3>
+                <h2 style={styles.text}>Skills</h2>
             </Grid.Row>
-        </Grid>
     );
   }
 }
 
-export default Quote;
+export default SkillsBanner;

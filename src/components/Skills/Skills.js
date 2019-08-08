@@ -12,6 +12,7 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 
 // Import Custom Files
 import Data from '../../data/skills-data.js'
+import SkillsBanner from './SkillsBanner.js'
 
 //animation imports
 import { easeQuadInOut } from "d3-ease";
@@ -30,9 +31,9 @@ import 'react-circular-progressbar/dist/styles.css';
 class Skills extends React.Component {
     render() {
         return (
-            <Grid style={{ marginLeft: "88px" }}>
-                <h2>Skills</h2>
-                <Grid.Row columns={4} >
+            <Grid>
+                <SkillsBanner />
+                <Grid.Row columns={4} style={{ marginLeft: "88px" }}>
                     {Data.map((data) => 
                         <Grid.Column verticalAlign="middle" textAlign="center" width={3} stretched >
                         <AnimatedProgressProvider
