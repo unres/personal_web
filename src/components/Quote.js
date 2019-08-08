@@ -4,27 +4,30 @@
 
 // Import Required Libraries
 import React from "react";
-import { Image, Icon } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 
 
 // Import Custom Files
-import image from "../assets/mountain.jpeg";
+
 
 /// ///////////////////////////////////////////////////////////
 // G L O B A L   D E F I T I N O N
 /// ///////////////////////////////////////////////////////////
 
 const styles = {
-  image: {
-    height: "101vh",
-    width: "100vw",
+  textQuote: {
+    marginLeft: '50vh',
+    color: 'White'
   },
-  overlay: {
-    position: 'absolute',
-    bottom: 0,
+  textAuthor: {
+    color: 'White'
+  },
+  section: {
+    marginTop: '6px',
     width: '100%',
-    height: '100vh',
-    backgroundColor: 'rgba(0,0,0,0.7)'
+    height: '20vh',
+    backgroundColor: 'grey',
+    padding: "40px 40px 40px 40px"
   }
 };
 
@@ -35,16 +38,13 @@ const styles = {
 class Img extends React.Component {
   render() {
     return (
-      <div>
-      <Image src={image} style={styles.image} />
-      <div style={styles.overlay} />
-      <div className="hero-text">
-        <p style={{fontSize: '75px'}}> Developer.</p>
-      </div>
-      <div className="hero-arrow" >
-        <Icon name="arrow alternate circle down outline" inverted size="huge"/>
-      </div>
-    </div>
+        <Grid>
+            <Grid.Row style={styles.section}>
+                <h2 style={styles.textQuote}>"This is an Awesome Quote that is deep and legendary"</h2>
+                
+                <h3 style={styles.textAuthor}> - A Legend</h3>
+            </Grid.Row>
+        </Grid>
     );
   }
 }
