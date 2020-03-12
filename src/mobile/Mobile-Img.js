@@ -4,7 +4,7 @@
 
 // Import Required Libraries
 import React from "react";
-import { Image, Icon } from "semantic-ui-react";
+import { Image } from "semantic-ui-react";
 
 
 // Import Custom Files
@@ -16,8 +16,11 @@ import image from "../assets/mountain.jpeg";
 
 const styles = {
   image: {
-    height: "101vh",
+    height: "100vh",
     width: "100vw",
+  },
+  phoneImage: {
+    height: "50vh"
   },
   overlay: {
     position: 'absolute',
@@ -35,16 +38,13 @@ const styles = {
 class Img extends React.Component {
   render() {
     return (
-      <div>
-      <Image src={image} style={styles.image} />
-      <div style={styles.overlay} />
-      <div className="hero-text">
-        <p style={{fontSize: '75px'}}> Developer.</p>
+        <div>
+        <Image src={image} style={styles.phoneImage} fluid />
+        <div style={{position: 'absolute', bottom: 0, width: '100%', height: '50vh',backgroundColor: 'rgba(0,0,0,0.7)'}} />
+        <div className="hero-text-mobile">
+          <font size="10">Developer.</font>
+        </div>
       </div>
-      <div className="hero-arrow" >
-        <Icon name="arrow alternate circle down outline" inverted size="huge"/>
-      </div>
-    </div>
     );
   }
 }
